@@ -1,0 +1,27 @@
+{
+  "name": "search-engine",
+  "version": "1.0.0",
+  "description": "A command line application to search different types of data and return the results in a human readable format.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest src/** --coverage --watch",
+    "dev": "nodemon",
+    "clean": "rimraf ./dist",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/index.js"
+  },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "search-engine"
+  ],
+  "author": "Anish Maharjan",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^15.3.0",
+    "nodemon": "^2.0.7",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}
