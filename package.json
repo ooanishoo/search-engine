@@ -16,7 +16,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettier-format && npm run lint",
+      "pre-commit": "lint-staged",
       "pre-push": "npm test -- --collectCoverage --watchAll=false"
     }
   },
