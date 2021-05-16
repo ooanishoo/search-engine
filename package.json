@@ -15,6 +15,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
+    "src/**/*.ts": "prettier  --config .prettierrc --write",
     "*.ts": "eslint --cache --fix"
   },
   "keywords": [
