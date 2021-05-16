@@ -14,18 +14,18 @@
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm test"
-    }
-  },
   "lint-staged": {
+    "*.ts": "eslint --cache --fix",
     "*.(js|html|css|md)": [
       "prettier --write",
       "git add"
-    ],
-    "*.ts": "eslint --cache --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test -- --collectCoverage --watchAll=false"
+    }
   },
   "keywords": [
     "typescript",

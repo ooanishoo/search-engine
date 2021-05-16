@@ -1,1 +1,1 @@
-console.log('Hello Search Engine!')
+console.log('Hello World')
