@@ -4,7 +4,8 @@
   "description": "A command line application to search different types of data and return the results in a human readable format.",
   "main": "index.js",
   "scripts": {
-    "test": "jest src/** --coverage --watch",
+    "test": "jest",
+    "test:coverage": "jest src/** --coverage --watch",
     "dev": "nodemon",
     "clean": "rimraf ./dist",
     "build": "rimraf ./dist && tsc",
@@ -12,6 +13,12 @@
     "lint": "eslint . --ext .ts",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier-format && npm run lint",
+      "pre-push": "npm test -- --collectCoverage --watchAll=false"
+    }
   },
   "keywords": [
     "typescript",
