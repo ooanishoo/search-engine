@@ -11,7 +11,7 @@
     "build": "rimraf ./dist && tsc",
     "start": "npm run build && node dist/index.js",
     "lint": "eslint . --ext .ts",
-    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "prettier-format": "prettier --write",
     "prepare": "husky install"
   },
   "husky": {
@@ -19,6 +19,11 @@
       "pre-commit": "npm run prettier-format && npm run lint",
       "pre-push": "npm test -- --collectCoverage --watchAll=false"
     }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "npm run prettier-format"
+    ]
   },
   "keywords": [
     "typescript",
