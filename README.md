@@ -50,7 +50,6 @@ This is the directory/file structure once you clone the repository from the git.
 │   ├── ask
 │   │   ├── ask.spec.ts
 │   │   └── ask.ts
-│   ├── index.spec.ts
 │   ├── index.ts
 │   ├── search
 │   │   ├── searchEntity.spec.ts
