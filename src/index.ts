@@ -7,6 +7,7 @@ import {
 import { SearchEntity } from './search/searchEntity'
 import { SearchQuery } from './types'
 import { getEntityFields, isValidSearchQuery } from './utils'
+import { performance } from 'perf_hooks'
 
 export const start = async (): Promise<void> => {
   const isRunning = true
@@ -41,13 +42,23 @@ export const start = async (): Promise<void> => {
 
       // check if the search query is valid
       if (isValidSearchQuery(searchQuery)) {
+        const startSearch = performance.now()
+
         // search data
         const searchEntity = new SearchEntity(entity, field, value)
         const hasReadData = await searchEntity.readData()
         if (hasReadData) {
           const results = searchEntity.searchData()
-          console.log({ results })
-          console.log(`\nFound ${results.length} results \n`)
+          const endSearch = performance.now()
+
+          // calculate the search duration
+          const searchDuration = (endSearch - startSearch).toFixed(2)
+
+          // display the search data
+          console.log(results)
+          console.log(
+            `\nFound ${results.length} result in ${searchDuration} milliseconds. \n`
+          )
         }
       }
     } catch (err) {
