@@ -4,9 +4,9 @@
   "description": "A command line application to search different types of data and return the results in a human readable format.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:coverage": "jest src/** --coverage --watch",
-    "dev": "nodemon",
+    "test": "jest src/**",
+    "test-coverage": "jest src/** --coverage --watch",
+    "dev": "ts-node src/index.ts",
     "clean": "rimraf ./dist",
     "build": "rimraf ./dist && tsc",
     "start": "npm run build && node dist/index.js",
@@ -16,15 +16,11 @@
   },
   "lint-staged": {
     "*.ts": "eslint --fix",
-    "*.(js|html|css|md)": [
-      "prettier --write",
-      "git add"
-    ]
+    "src/**/*.(ts,js)": "npm run prettier-format"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm test -- --collectCoverage --watchAll=false"
+      "pre-commit": "lint-staged"
     }
   },
   "keywords": [
@@ -36,7 +32,9 @@
   "license": "MIT",
   "devDependencies": {
     "@testing-library/jest-dom": "^5.12.0",
+    "@types/inquirer": "^7.3.1",
     "@types/jest": "^26.0.23",
+    "@types/jsonfile": "^6.0.0",
     "@types/node": "^15.3.0",
     "@typescript-eslint/eslint-plugin": "^4.23.0",
     "@typescript-eslint/parser": "^4.23.0",
@@ -52,5 +50,10 @@
     "ts-jest": "^26.5.6",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "commander": "^7.2.0",
+    "inquirer": "^8.1.0",
+    "jsonfile": "^6.1.0"
   }
 }
