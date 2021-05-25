@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "jest src/**",
-    "test-coverage": "jest src/** --coverage --watch",
     "dev": "ts-node src/index.ts",
     "clean": "rimraf ./dist",
     "build": "rimraf ./dist && tsc",
