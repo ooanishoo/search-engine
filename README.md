@@ -36,7 +36,31 @@ $ cd search-engine
 This is the directory/file structure once you clone the repository from the git.
 
 ```sh
-
+├── README.md
+├── data
+│   ├── organizations.json
+│   ├── tickets.json
+│   └── users.json
+├── jest
+│   └── setup.js
+├── jest.config.js
+├── package-lock.json
+├── package.json
+├── src
+│   ├── ask
+│   │   ├── ask.spec.ts
+│   │   └── ask.ts
+│   ├── index.spec.ts
+│   ├── index.ts
+│   ├── search
+│   │   ├── searchEntity.spec.ts
+│   │   └── searchEntity.ts
+│   ├── types
+│   │   └── index.ts
+│   └── utils
+│       ├── index.spec.ts
+│       └── index.ts
+└── tsconfig.json
 ```
 Install dependencies
 ```sh
