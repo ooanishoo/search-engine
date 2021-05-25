@@ -1,5 +1,5 @@
-describe('should return true', () => {
-  it('passes the test', () => {
+describe('run without crashing', () => {
+  it('should return true', () => {
     expect(true).toBeTruthy()
   })
 })
