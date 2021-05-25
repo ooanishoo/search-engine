@@ -5,7 +5,7 @@ describe('getEntityFields()', () => {
     entityType         | searchableFields
     ${`users`}         | ${['_id', 'url', 'external_id', 'email', 'name', 'alias', 'created_at', 'active', 'verified', 'shared', 'locale', 'timezone', 'last_login_at', 'phone', 'signature', 'organization_id', 'tags', 'suspended', 'role']}
     ${`organizations`} | ${['_id', 'url', 'external_id', 'name', 'domain_names', 'created_at', 'details', 'shared_tickets', 'tags']}
-    ${`tickets`}       | ${['_id', 'url', 'external_id', 'created_at', 'type', 'subject', 'description?', 'priority', 'status', 'submitter_id', 'assignee_id', 'tags', 'has_incidents', 'due_at', 'via', 'organization_id']}
+    ${`tickets`}       | ${['_id', 'url', 'external_id', 'created_at', 'type', 'subject', 'description', 'priority', 'status', 'submitter_id', 'assignee_id', 'tags', 'has_incidents', 'due_at', 'via', 'organization_id']}
   `(
     `should return correct searchable fields when entity = $entityType`,
     ({ entityType, searchableFields }) => {

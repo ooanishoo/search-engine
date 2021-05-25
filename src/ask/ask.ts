@@ -1,5 +1,22 @@
-import { prompt } from 'inquirer'
+import { prompt, Separator } from 'inquirer'
 import { EntityType, FieldType } from '../types'
+
+export const askSelectOptions = async (): Promise<string> => {
+  try {
+    const { menu } = await prompt([
+      {
+        type: 'list',
+        name: 'menu',
+        message: 'What would you like to do ?',
+        choices: [new Separator(), 'Search for entity', 'Exit'],
+        filter: (val: string) => val.toLowerCase()
+      }
+    ])
+    return menu
+  } catch (err) {
+    throw new Error(err)
+  }
+}
 
 export const askSelectEntity = async (): Promise<EntityType> => {
   const entities: EntityType[] = ['users', 'organizations', 'tickets']

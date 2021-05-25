@@ -63,10 +63,8 @@ npm test
 
 
 ## Packages used:
-- [jest](https://facebook.github.io/jest/docs/getting-started.html) : A framework to write unit tests
 - [inquirer](https://www.npmjs.com/package/inquirer): A collection of common interactive command line user interfaces.
-- [eslint](https://www.npmjs.com/package/eslint): To lint typescript files
-- [prettier](https://www.npmjs.com/package/prettier): For consistent code formatting.
+- [jsonfile](https://www.npmjs.com/package/jsonfile): Easily read/write JSON files in Node.js
 
 
 ## Author

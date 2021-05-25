@@ -6,8 +6,7 @@ export const getFilePath = (fileName: string): string => {
   const location = dirArray
     .splice(0, dirArray.indexOf('search-engine') + 1)
     .join('/')
-  const PATH = path.join(location, `./data/${fileName}.json`)
-  return path.resolve(PATH)
+  return path.join(location, `./data/${fileName}.json`)
 }
 
 export const getEntityFields = (entityType: EntityType): string[] => {
@@ -56,7 +55,7 @@ export const getEntityFields = (entityType: EntityType): string[] => {
         'created_at',
         'type',
         'subject',
-        'description?',
+        'description',
         'priority',
         'status',
         'submitter_id',
