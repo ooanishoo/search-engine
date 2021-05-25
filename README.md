@@ -96,7 +96,7 @@ npm test
 👤 **Anish Maharjan**
 
 * Github: [@ooanishoo](https://github.com/ooanishoo)
-* LinkedIn: [@https:\/\/www.linkedin.com\/in\/ooanishoo\/](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/ooanishoo\/)
+* LinkedIn: [@ooanishoo](https://www.linkedin.com/in/ooanishoo/)
 
 ## Show your support
 
