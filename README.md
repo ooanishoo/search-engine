@@ -8,16 +8,16 @@
   </a>
 </p>
 
-> A command line application to search different types of data and return the results in a human readable format.
+> A command line application to search different types of data and return the results in a human-readable format.
 
 ## Application Instructions
 
-Using the provided data (tickets.json and users.json and organization.json) write a simple command line application to search the data and return the results in a human readable format.
+Using the provided data (tickets.json and users.json and organization.json) write a simple command line application to search the data and return the results in a human-readable format.
 
-- Feel free to use libraries or roll your own code asyou see fit. However, please do not use a database or full text search product as we areinterested to see how you write the solution.
+- Feel free to use libraries or roll your own code as you see fit. However, please do not use a database or full-text search product as we are interested to see how you write the solution.
 - Where the data exists, values from any related entities should be included in the results,i.e. searching organization by id should return it's tickets and users.
 - The user should be able to search on any field, full value matching is fine (e.g. "mar" won't return "mary").
-- The user should also be able to search for empty values,e.g. where description is empty. Search can get pretty complicated pretty easily, we just want to see that you can code a basicbut efficient search application. Ideally, searchresponse times should not increase linearly asthe number of documents grows.You can assume all data can fit into memory on a single machine.
+- The user should also be able to search for empty values,e.g. where the description is empty. Search can get pretty complicated pretty easily, we just want to see that you can code a basic but efficient search application. Ideally, search response times should not increase linearly as the number of documents grows. You can assume all data can fit into memory on a single machine.
 
 # Getting started
 ### Prerequisites
@@ -28,7 +28,7 @@ Using the provided data (tickets.json and users.json and organization.json) writ
 ### Installation
 
 Clone the repository
-```shell
+```
 $ git clone https://github.com/ooanishoo/search-engine
 $ cd search-engine
 ```
